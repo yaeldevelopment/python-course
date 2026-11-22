@@ -1,3 +1,0 @@
-n=int(input("enter number:"))
-for i in range(1,n):
-    print("o"*(i*2-1))
