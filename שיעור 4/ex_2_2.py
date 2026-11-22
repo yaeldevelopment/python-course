@@ -1,0 +1,15 @@
+tp,tn,fp,fn=input("enter tp,tn,fp,fn: ").split(",")
+tp = int(tp)
+tn = int(tn)
+fp = int(fp)
+fn = int(fn)
+accuracy = (tp + tn) / (tp + tn + fp + fn)
+precision = tp / (tp + fp)
+recall = tp / (tp + fn)
+f1 = 2 * precision * recall / (precision + recall)
+print("accuracy:",round( accuracy*100,2))
+print("precision:", round(precision*100,2))
+print("recall:", round(recall*100,2))
+print("f1:", round(f1*100,2))
+#round פונקציה שמעגלת מקבלת 2 פרמטרים אחד המספר שצריך להגל בדרך כלל float והשני כמה מקומות אחרי הנקודה
+#semantics ששתיהם 0 נקבל שגיאה שלא ניתן לחלק ב-סdivision by zero
